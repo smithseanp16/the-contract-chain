@@ -1,32 +1,35 @@
 <template>
   <div>
-    <b-form @submit="onSubmit"
-            style="width:450px; margin:auto; margin-top:120px; padding:50px; background-color:#efebeb">
+    <b-form @submit="onSubmit" style="width:450px; margin:auto; margin-top:120px; padding:50px; background-color:#efebeb">
       <h1 style="text-align:center; margin-bottom:20px">Signup</h1>
-      <b-form-group id="exampleInputGroup1">
-        <b-form-input id="exampleInput1"
+      <b-form-group id="usernameInputGroup">
+        <b-form-input id="usernameInput"
                       type="text" v-model="form.username" required
                       placeholder="Username"
+                      autocomplete="username"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="exampleInputGroup1">
-        <b-form-input id="exampleInput1"
+      <b-form-group id="emailInputGroup">
+        <b-form-input id="emailInput"
                       type="email" v-model="form.email" required
                       placeholder="Email"
+                      autocomplete="email"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="exampleInputGroup2">
-        <b-form-input id="exampleInput2"
+      <b-form-group id="passwordInputGroup">
+        <b-form-input id="passwordInput"
                       type="password" v-model="form.password" required
                       placeholder="Password"
+                      autocomplete="new-password"
         ></b-form-input>
       </b-form-group>
-      <b-form-group id="exampleInputGroup2">
-        <b-form-input id="exampleInput2"
+      <b-form-group id="confirmPasswordInputGroup">
+        <b-form-input id="confirmPasswordInput"
                       type="password" v-model="form.confirm_password" required
                       placeholder="Confirm_Password"
+                      autocomplete="new-password"
         ></b-form-input>
       </b-form-group>
 
@@ -78,7 +81,8 @@
       onSubmit(evt) {
         evt.preventDefault();
         this.errorMessage='';
-        axios.post(`http://52.14.177.91:3000/api/register`, this.form)
+        //axios.post(`http://127.0.0.1:9000/api/register`, this.form)  //local setting
+        axios.post(`http://52.14.177.91:3000/api/register`, this.form) //aws setting
           .then(response => {
               // JSON responses are automatically parsed.
               this.form = response.data;
