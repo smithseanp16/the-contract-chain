@@ -4,8 +4,8 @@ var path = require('path')
 var app = express();
 var mongoose = require('mongoose');
 var crypto = require('crypto');
-//mongoose.connect('mongodb://@localhost:27017/vue_auth'); //local setting
-mongoose.connect('mongodb://milan:milan123456@localhost:27017/vue_auth', {useMongoClient: true}); //aws setting
+mongoose.connect('mongodb://@localhost:27017/vue_auth'); //local setting
+//mongoose.connect('mongodb://milan:milan123456@localhost:27017/vue_auth', {useMongoClient: true}); //aws setting
 mongoose.Promise = global.Promise;
 
 
