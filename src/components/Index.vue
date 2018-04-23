@@ -1,11 +1,11 @@
 <template>
   <div>
-    <router-link class="ffl-link login" to="/login">
+  <!--    <router-link class="ffl-link login" to="/login">
       Login
     </router-link>
     <router-link class="ffl-link register" to="/register">
       Register
-    </router-link>
+    </router-link> -->
     <h1 class="header"><b>Hello World!</b></h1>
   </div>
 </template>
