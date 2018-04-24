@@ -6,9 +6,7 @@
     <router-link class="ffl-link register" to="/register">
       Register
     </router-link> -->
-    <h1 class="header"><b>The Contract Chain</b></h1>
-    <p>Large picture cutting across the page</p>
-    <p>The Contract Chain</p>
+    <h1 class="header"><b>FAQ</b></h1>
   </div>
 </template>
 
