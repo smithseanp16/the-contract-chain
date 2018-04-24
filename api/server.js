@@ -4,8 +4,8 @@ var path = require('path')
 var app = express();
 var mongoose = require('mongoose');
 var crypto = require('crypto');
-mongoose.connect('mongodb://@localhost:27017/vue_auth'); //local setting
-//mongoose.connect('mongodb://milan:milan123456@localhost:27017/vue_auth', {useMongoClient: true}); //aws setting
+//mongoose.connect('mongodb://@localhost:27017/vue_auth'); //local setting
+mongoose.connect('mongodb://milan:milan123456@localhost:27017/vue_auth', {useMongoClient: true}); //aws setting
 mongoose.Promise = global.Promise;
 
 
@@ -50,8 +50,8 @@ app.use(bodyParser.json());
 app.set('superSecret', config.secret);
 var sipherKey = 'qazxswedcvfrtgbnhyujmkliop7896547891230';
 
-//var port = process.env.PORT || 9000; //local setting
-var port = process.env.PORT || 3000; //aws setting
+var port = process.env.PORT || 9000; //local setting
+//var port = process.env.PORT || 3000; //aws setting
 
 var router = express.Router();
 

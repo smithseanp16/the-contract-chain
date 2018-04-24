@@ -81,8 +81,8 @@
       onSubmit(evt) {
         evt.preventDefault();
         this.errorMessage='';
-        axios.post(`http://127.0.0.1:9000/api/register`, this.form)  //local setting
-        //axios.post(`http://52.14.177.91:3000/api/register`, this.form) //aws setting
+        //axios.post(`http://127.0.0.1:9000/api/register`, this.form)  //local setting
+        axios.post(`http://52.14.177.91:3000/api/register`, this.form) //aws setting
           .then(response => {
               // JSON responses are automatically parsed.
               this.form = response.data;
