@@ -54,8 +54,8 @@
         evt.preventDefault()
         // this.$router.push('/home')
         this.errorMessage = "";
-        //axios.post(`http://127.0.0.1:9000/api/login`, this.form) //local setting
-        axios.post(`http://52.14.177.91:3000/api/login`, this.form) //aws setting
+        axios.post(`http://127.0.0.1:9000/api/login`, this.form) //local setting
+        //axios.post(`http://52.14.177.91:3000/api/login`, this.form) //aws setting
           .then(response => {
               // JSON responses are automatically parsed.
               this.form = response.data
